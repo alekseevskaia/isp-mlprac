@@ -1,0 +1,21 @@
+[Unit]
+Description=MLCourse Evaluation Server
+Wants=network-online.target
+After=network-online.target
+Requires=docker.service
+After=docker.service
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/mlcourse-prac
+Restart=always
+ExecStart=/usr/bin/docker run --gpus 3 \
+  -v /opt/mlcourse-prac/solutions:/solutions \
+  -v /opt/mlcourse-prac/data:/data:ro \
+  -v /opt/mlcourse-prac/mlcourse.conf:/etc/mlcourse.conf:ro \
+  --name mlcourse mlcourse
+ExecStop=/usr/bin/docker stop --time 30 mlcourse
+ExecStopPost=/usr/bin/docker rm -f mlcourse
+
+[Install]
+WantedBy=multi-user.target

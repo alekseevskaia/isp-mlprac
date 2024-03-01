@@ -1,0 +1,48 @@
+[tool.poetry]
+name = "mlcourse-prac"
+version = "0.1.0"
+description = ""
+authors = [
+    "Andrey Ezhov <ezhandrvlad@ispras.ru>",
+    "Anna Chistyakova <a.chistyakova@ispras.ru>",
+    "Daria Shelepneva <d-d-sh@ispras.ru>",
+    "Ekaterina Kurdenkova <kurdenkova@ispras.ru>",
+    "Elizaveta Kuzmina <kuzminaev@ispras.ru>",
+    "Igor Kochetkov <kochetkov@ispras.ru>",
+    "Irina Alekseevskaia <alekseevskaia@ispras.ru>",
+    "Kirill Kanev <kanev@ispras.ru>",
+    "Konstantin Arkhipenko <arkhipenko@ispras.ru>",
+    "Leonid Starykh <starykh@ispras.ru>",
+    "Mikhail Zykov <mizykov@ispras.ru>",
+]
+
+[tool.poetry.dependencies]
+python = "~3.10"
+requests = "^2.28.1"
+pyTelegramBotAPI = "^4.7.1"
+tabulate = "^0.9.0"
+torch = {url = "https://download.pytorch.org/whl/cu116/torch-1.13.0%2Bcu116-cp310-cp310-linux_x86_64.whl"}
+torchvision = {url = "https://download.pytorch.org/whl/cu116/torchvision-0.14.0%2Bcu116-cp310-cp310-linux_x86_64.whl"}
+
+[tool.poetry.dev-dependencies]
+git-review = "^2.3.1"
+black = "^22.6.0"
+flake8 = "^4.0.1"
+flake8-builtins = "^1.5.3"
+flake8-comprehensions = "^3.10.0"
+flake8-docstrings = "^1.6.0"
+flake8-import-order = "^0.18.1"
+flake8-quotes = "^3.3.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 100
+target-version = ["py310"]
+skip-string-normalization = true
+
+[tool.poetry.scripts]
+mlcourse-server = "mlcourse_prac.server:main"
+mlcourse-evaluate = "mlcourse_prac.evaluate:main"
