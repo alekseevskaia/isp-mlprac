@@ -3,17 +3,7 @@ name = "mlcourse-prac"
 version = "0.1.0"
 description = ""
 authors = [
-    "Andrey Ezhov <ezhandrvlad@ispras.ru>",
-    "Anna Chistyakova <a.chistyakova@ispras.ru>",
-    "Daria Shelepneva <d-d-sh@ispras.ru>",
-    "Ekaterina Kurdenkova <kurdenkova@ispras.ru>",
-    "Elizaveta Kuzmina <kuzminaev@ispras.ru>",
-    "Igor Kochetkov <kochetkov@ispras.ru>",
-    "Irina Alekseevskaia <alekseevskaia@ispras.ru>",
-    "Kirill Kanev <kanev@ispras.ru>",
-    "Konstantin Arkhipenko <arkhipenko@ispras.ru>",
-    "Leonid Starykh <starykh@ispras.ru>",
-    "Mikhail Zykov <mizykov@ispras.ru>",
+    "Irina Alekseevskaia <alekseevskaia@ispras.ru>"
 ]
 
 [tool.poetry.dependencies]
